@@ -1,6 +1,5 @@
 package com.github.alvarolongueira.randomthings.genericfilters;
 
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -8,9 +7,7 @@ import java.util.Set;
 import org.immutables.value.Value;
 
 @Value.Immutable
-public abstract class StoragementRule extends Rule implements Serializable {
-
-	private static final long serialVersionUID = 291707691725259018L;
+public abstract class StoragementRule extends Rule{
 
 	public static class Builder extends ImmutableStoragementRule.Builder {
 

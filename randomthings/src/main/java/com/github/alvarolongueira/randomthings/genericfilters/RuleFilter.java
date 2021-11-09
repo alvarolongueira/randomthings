@@ -1,14 +1,11 @@
 package com.github.alvarolongueira.randomthings.genericfilters;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import org.immutables.value.Value;
 
 @Value.Immutable
-public abstract class RuleFilter<T> implements Serializable {
-
-	private static final long serialVersionUID = 6932030771418867219L;
+public abstract class RuleFilter<T> {
 
 	public static class Builder<T> extends ImmutableRuleFilter.Builder<T> {
 

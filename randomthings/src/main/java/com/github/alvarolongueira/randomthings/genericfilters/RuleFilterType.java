@@ -1,11 +1,7 @@
 package com.github.alvarolongueira.randomthings.genericfilters;
 
-import java.io.Serializable;
+public final class RuleFilterType<T> {
 
-public final class RuleFilterType<T> implements Serializable {
-
-	private static final long serialVersionUID = 7393675966394383844L;
-	
 	public static final RuleFilterType<String> RETAILER = new RuleFilterType<String>(String.class,"RETAILER" );
 	public static final RuleFilterType<String> CAMPAIGN = new RuleFilterType<String>(String.class, "CAMPAIGN");
 	public static final RuleFilterType<String> SECTION_TYPE = new RuleFilterType<String>(String.class, "SECTION_TYPE");

@@ -1,12 +1,9 @@
 package com.github.alvarolongueira.randomthings.genericfilters;
 
-import java.io.Serializable;
 import java.util.Optional;
 import java.util.Set;
 
-public abstract class Rule implements Serializable {
-
-	private static final long serialVersionUID = 2799409163084357938L;
+public abstract class Rule {
 
 	public abstract Set<RuleFilter<?>> filters();
 
