@@ -1,6 +1,5 @@
 package com.github.alvarolongueira.randomthings.grouper;
 
-import java.io.Serializable;
 import java.util.Optional;
 
 import org.immutables.value.Value;

@@ -58,7 +58,6 @@ public class OrderLineGrouperTest {
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0100110025005_00_00_00 = referenceSelector(REF_0100110025005, ImmutableSet.of(),  null);
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0100110025005_04_00_00 = referenceSelector(REF_0100110025005, ImmutableSet.of(4),  null);
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0100110025005_25_00_00 = referenceSelector(REF_0100110025005, ImmutableSet.of(2,5),  null);
-	private static final ByReferenceOrderLineSelector REF_SELECTOR_0100110025005_245_00_00 = referenceSelector(REF_0100110025005, ImmutableSet.of(2,4,5),  null);
 	
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0639540082299_00_00_00 = referenceSelector(REF_0639540082299, ImmutableSet.of(),  null);
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0639540082299_01_00_00 = referenceSelector(REF_0639540082299, ImmutableSet.of(1),  null);
@@ -71,8 +70,6 @@ public class OrderLineGrouperTest {
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0989020980201_03_00_00 = referenceSelector(REF_0989020980201, ImmutableSet.of(3),  null);
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0989020980201_05_00_00 = referenceSelector(REF_0989020980201, ImmutableSet.of(5),  null);
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0989020980201_45_00_00 = referenceSelector(REF_0989020980201, ImmutableSet.of(4,5),  null);
-	private static final ByReferenceOrderLineSelector REF_SELECTOR_0989020980201_245_00_00 = referenceSelector(REF_0989020980201, ImmutableSet.of(2,4,5),  null);
-	private static final ByReferenceOrderLineSelector REF_SELECTOR_0989020980201_13245_00_00 = referenceSelector(REF_0989020980201, ImmutableSet.of(1,2,3,4,5),  null);
 	
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0888888980032_00_00_00 = referenceSelector(REF_0888888980032, ImmutableSet.of(),  null);
 	private static final ByReferenceOrderLineSelector REF_SELECTOR_0888888980032_13_00_00 = referenceSelector(REF_0888888980032, ImmutableSet.of(1,3),  null);
@@ -1146,6 +1143,7 @@ public class OrderLineGrouperTest {
 		actual.forEach(value -> System.out.println(value));
 	}
 	
+	@SuppressWarnings("unchecked")
 	private <S extends OrderLineSelector> OrderLine<S> buildLine (long id, OrderTarget target, S selector){
 		return OrderLine.builder(target, selector)
 				.reference(id)
